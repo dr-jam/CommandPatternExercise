@@ -19,7 +19,7 @@ The remaining 30 points will be based on your peer review of a classmate's progr
 ### Due Date and Submission Instructions
 
 Due date: Monday, April 15th at 11:59 PM.  
-Your work will be submitted individually via GitHub Classroom (starting links to be distrubuted in Canvas). The Unity project in your master branch will be graded. Other branches will be ignored. 
+Your work will be submitted individually via GitHub Classroom (starting links to be distrubuted in Canvas). The Unity project in your the master origin branch or your repository as assigned on GitHub Classroom will graded. Other branches will be ignored. 
 
 ## Stage 1: Both legs.
 Create a left movement ICaptainCommand and use it in the `CaptainController.cs` script.  
