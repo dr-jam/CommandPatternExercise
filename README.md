@@ -16,6 +16,11 @@ Your project will be score according to the following 70 point system:
 
 The remaining 30 points will be based on your peer review of a classmate's programming exercise submission.
 
+### Due Date and Submission Instructions
+
+Due date: Monday, April 15th at 11:59 PM.  
+Your work will be submitted individually via GitHub Classroom (starting links to be distrubuted in Canvas). The Unity project in your master branch will be graded. Other branches will be ignored. 
+
 ## Stage 1: Both legs.
 Create a left movement ICaptainCommand and use it in the `CaptainController.cs` script.  
 Left based on left axis movement. Be sure to `MoveCharacterLeft.cs` as a reference and use the following line of code to make sure the Captain is facing the correct direction when moving:  
