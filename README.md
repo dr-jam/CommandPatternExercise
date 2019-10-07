@@ -22,9 +22,9 @@ Due date: Monday, April 15th at 11:59 PM.
 Your work will be submitted individually via GitHub Classroom (starting links to be distributed in Canvas). The Unity project in your the master origin branch or your repository as assigned on GitHub Classroom will be graded. Other branches will be ignored. 
 
 ## Stage 1: Both legs.
-Create a left movement ICaptainCommand and use it in the `CaptainController.cs` script.  
-Left based on left axis movement. Be sure to `MoveCharacterLeft.cs` as a reference and use the following line of code to make sure the Captain is facing the correct direction when moving:  
-`gameObject.GetComponent<SpriteRenderer>().flipX = false;`
+Create a right movement ICaptainCommand and use it in the `CaptainController.cs` script.  
+Right based on right axis movement. Be sure to `MoveCharacterLeft.cs` as a reference and use the following property of the  `SpriteRenderer` compotnent to make sure the Captain is facing the correct direction when moving:  
+`gameObject.GetComponent<SpriteRenderer>().flipX`
 
 ## Stage 2: Heave ho!
 Create the following IPirateCommands to be used with Cutlass, Pegleg, and Scurvybeard:
