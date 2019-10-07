@@ -18,7 +18,7 @@ The remaining 30 points will be based on your peer review of a classmate's progr
 
 ### Due Date and Submission Instructions
 
-Due date: Monday, April 15th at 11:59 PM.  
+Due date: Thursday, October 10th at 11:59 PM.  
 Your work will be submitted individually via GitHub Classroom (starting links to be distributed in Canvas). The Unity project in your the master origin branch or your repository as assigned on GitHub Classroom will be graded. Other branches will be ignored. 
 
 ## Stage 1: Both legs.
