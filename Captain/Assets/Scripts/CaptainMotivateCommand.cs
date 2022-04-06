@@ -7,59 +7,59 @@ namespace Captain.Command
 {
     public class CaptainMotivateCommand : MonoBehaviour, ICaptainCommand
     {
-        private bool Active;
+        private bool active;
         private const float DURATION = 0.4f;
         private const float OFFSET = 0.2f;
-        private float ElapsedTime;
-        private GameObject Motivator;
-        private BoxCollider2D MotivationBox;
+        private float elapsedTime;
+        private GameObject motivator;
+        private BoxCollider2D motivationBox;
 
         void Start()
         {
-            this.ElapsedTime = 0.0f;
-            this.Active = false;
+            this.elapsedTime = 0.0f;
+            this.active = false;
         }
 
         void Update()
         {
-            if (this.Active)
+            if (this.active)
             {
-                this.ElapsedTime += Time.deltaTime;
-                if (this.ElapsedTime > OFFSET)
+                this.elapsedTime += Time.deltaTime;
+                if (this.elapsedTime > OFFSET)
                 {
                     var contacts = new Collider2D[32];
-                    this.MotivationBox.GetContacts(contacts);
+                    this.motivationBox.GetContacts(contacts);
 
-                    foreach (var col in contacts)
+                    foreach (var contactedObject in contacts)
                     {
 
-                        if (col != null && col.gameObject != null && col.gameObject.tag == "Pirate")
+                        if (contactedObject != null && contactedObject.gameObject != null && contactedObject.gameObject.tag == "Pirate")
                         {
-                            col.gameObject.GetComponent<PirateController>().Motivate();
-                            this.Active = false;
+                            contactedObject.gameObject.GetComponent<PirateController>().Motivate();
+                            this.active = false;
                         }
                         break;
                     }
 
-                    if (this.ElapsedTime > DURATION || !this.Active)
+                    if (this.elapsedTime > DURATION || !this.active)
                     {
-                        this.Active = false;
+                        this.active = false;
 
                     }
 
                 }
-                this.Motivator.GetComponent<Animator>().SetBool("Motivate", this.Active);
+                this.motivator.GetComponent<Animator>().SetBool("Motivate", this.active);
             }
         }
 
         public void Execute(GameObject gameObject)
         {
-            if(!this.Active)
+            if(!this.active)
             {
-                this.ElapsedTime = 0.0f;
-                this.Active = true;
-                this.Motivator = gameObject;
-                this.MotivationBox = this.Motivator.transform.Find("Motivator").GetComponent<BoxCollider2D>();
+                this.elapsedTime = 0.0f;
+                this.active = true;
+                this.motivator = gameObject;
+                this.motivationBox = this.motivator.transform.Find("Motivator").GetComponent<BoxCollider2D>();
             }
         }
     }

@@ -6,19 +6,22 @@ using Captain.Command;
 
 public class PirateController : MonoBehaviour
 {
-    public IPirateCommand ActiveCommand;
-    public GameObject ProductPrefab;
+    [SerializeField]
+    public IPirateCommand activeCommand;
+    
+    [SerializeField]
+    public GameObject productPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.ActiveCommand = ScriptableObject.CreateInstance<NoWorkPirateCommand>();
+        this.activeCommand = ScriptableObject.CreateInstance<NoWorkPirateCommand>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var working = this.ActiveCommand.Execute(this.gameObject, this.ProductPrefab);
+        var working = this.activeCommand.Execute(this.gameObject, this.productPrefab);
 
         this.gameObject.GetComponent<Animator>().SetBool("Exhausted", !working);
     }
@@ -26,6 +29,6 @@ public class PirateController : MonoBehaviour
     //Has received motivation. A likely source is from on of the Captain's morale inducements.
     public void Motivate()
     {
-        this.ActiveCommand = Object.Instantiate(ScriptableObject.CreateInstance<NoWorkPirateCommand>());
+        this.activeCommand = Object.Instantiate(ScriptableObject.CreateInstance<NoWorkPirateCommand>());
     }
 }

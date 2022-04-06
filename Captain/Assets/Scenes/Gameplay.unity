@@ -2121,6 +2121,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468160288}
+  - component: {fileID: 468160289}
+  - component: {fileID: 468160290}
   m_Layer: 0
   m_Name: Graveyard
   m_TagString: Untagged
@@ -2155,6 +2157,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &468160289
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468160287}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57, y: 10.8}
+  m_EdgeRadius: 0
+--- !u!114 &468160290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468160287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c29e7f6006e364f9093aeaab4e52e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTrack: Earth
 --- !u!1 &475475276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,8 +2555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3549fb0e76ea714b8f388406d3c5091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 606548955}
-  Speed: 0.75
+  target: {fileID: 606548955}
+  speed: 0.75
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2802,7 +2843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59a078325b061e419cc18aa06e02c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProductPrefab: {fileID: 7430569447165051818, guid: 8696b598a26aaf141abd683312c677d1,
+  productPrefab: {fileID: 7430569447165051818, guid: 8696b598a26aaf141abd683312c677d1,
     type: 3}
 --- !u!95 &559727864
 Animator:
@@ -3013,6 +3054,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588639554}
+  - component: {fileID: 588639555}
+  - component: {fileID: 588639556}
   m_Layer: 0
   m_Name: Mountains
   m_TagString: Untagged
@@ -3048,6 +3091,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &588639555
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588639553}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57, y: 7.3}
+  m_EdgeRadius: 0
+--- !u!114 &588639556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588639553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c29e7f6006e364f9093aeaab4e52e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTrack: Wind
 --- !u!1 &606548955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,7 +3146,7 @@ GameObject:
   - component: {fileID: 606548961}
   m_Layer: 8
   m_Name: Captain
-  m_TagString: Untagged
+  m_TagString: Captain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3081,7 +3163,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3194,10 +3276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b501c1d3bd1154fa0b0324410888cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Booty: {fileID: 836792294}
-  Mushrooms: 0
-  Skulls: 0
-  Gems: 0
+  booty: {fileID: 836792294}
 --- !u!95 &606548961
 Animator:
   serializedVersion: 3
@@ -5585,7 +5664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59a078325b061e419cc18aa06e02c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProductPrefab: {fileID: 5567988952978629257, guid: 4ed0901ae776e4147a1ef2d5afc26b2e,
+  productPrefab: {fileID: 5567988952978629257, guid: 4ed0901ae776e4147a1ef2d5afc26b2e,
     type: 3}
 --- !u!1 &1297054240
 GameObject:
@@ -6391,7 +6470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59a078325b061e419cc18aa06e02c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProductPrefab: {fileID: 3125093301620040353, guid: 24f449961098f0e4d922fa25241a1ad5,
+  productPrefab: {fileID: 3125093301620040353, guid: 24f449961098f0e4d922fa25241a1ad5,
     type: 3}
 --- !u!95 &1446729678
 Animator:
@@ -7750,6 +7829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802875505}
+  - component: {fileID: 1802875506}
   - component: {fileID: 1802875504}
   m_Layer: 0
   m_Name: MushroomForest
@@ -7758,102 +7838,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1802875504
-AudioSource:
+--- !u!114 &1802875504
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802875503}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c29e7f6006e364f9093aeaab4e52e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTrack: Water
 --- !u!4 &1802875505
 Transform:
   m_ObjectHideFlags: 0
@@ -7879,6 +7876,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1802875506
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802875503}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57, y: 10.8}
+  m_EdgeRadius: 0
 --- !u!4 &1815439166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8768286367827014160, guid: 3fe587587ee1b4b33a8f7ae7ff738853,
@@ -8617,6 +8640,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2036187317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036187319}
+  - component: {fileID: 2036187318}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2036187318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036187317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3423c45944031409af113d0173a230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTracks:
+  - clip: {fileID: 8300000, guid: 693553294ce34f24f93202bc847e69a8, type: 3}
+    audioSource: {fileID: 0}
+    title: Water
+    volume: 1
+    pitch: 1
+    loop: 1
+  - clip: {fileID: 8300000, guid: 12aab664c7e714a4ab29587eef11d834, type: 3}
+    audioSource: {fileID: 0}
+    title: Wind
+    volume: 1
+    pitch: 1
+    loop: 1
+  - clip: {fileID: 8300000, guid: af51277f059d39b44b4e12ff6879830d, type: 3}
+    audioSource: {fileID: 0}
+    title: Earth
+    volume: 1
+    pitch: 1
+    loop: 1
+  - clip: {fileID: 8300000, guid: f78417a7777407c41a7b3817294f432c, type: 3}
+    audioSource: {fileID: 0}
+    title: Fire
+    volume: 1
+    pitch: 1
+    loop: 1
+--- !u!4 &2036187319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036187317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.58169, y: -11.026328, z: -3.323279}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056053998
 GameObject:
   m_ObjectHideFlags: 0

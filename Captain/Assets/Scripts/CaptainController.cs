@@ -5,26 +5,26 @@ using Captain.Command;
 
 public class CaptainController : MonoBehaviour
 {
-    private ICaptainCommand Fire1;
-    private ICaptainCommand Fire2;
-    private ICaptainCommand Right;
-    private ICaptainCommand Left;
+    private ICaptainCommand fire1;
+    private ICaptainCommand fire2;
+    private ICaptainCommand right;
+    private ICaptainCommand left;
 
-    public UnityEngine.UI.Text Booty;
-    public int Mushrooms;
-    public int Skulls;
-    public int Gems;
+    [SerializeField]
+    private UnityEngine.UI.Text booty;
+    private int mushrooms;
+    private int skulls;
+    private int gems;
 
     // Start is called before the first frame update
     void Start()
     {
         this.gameObject.AddComponent<CaptainMotivateCommand>();
-        this.Fire1 = this.gameObject.GetComponent<CaptainMotivateCommand>();
-        this.Fire2 = ScriptableObject.CreateInstance<DoNothing>();
-        this.Right = ScriptableObject.CreateInstance<DoNothing>();
-        this.Left = ScriptableObject.CreateInstance<MoveCharacterLeft>();
-        this.Booty.text = "Booty";
-
+        this.fire1 = this.gameObject.GetComponent<CaptainMotivateCommand>();
+        this.fire2 = ScriptableObject.CreateInstance<DoNothing>();
+        this.right = ScriptableObject.CreateInstance<DoNothing>();
+        this.left = ScriptableObject.CreateInstance<MoveCharacterLeft>();
+        this.booty.text = "Booty";
     }
 
     // Update is called once per frame
@@ -32,24 +32,24 @@ public class CaptainController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            this.Fire1.Execute(this.gameObject);
+            this.fire1.Execute(this.gameObject);
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            this.Fire2.Execute(this.gameObject);
+            this.fire2.Execute(this.gameObject);
         }
         if(Input.GetAxis("Horizontal") > 0.01)
         {
-            this.Right.Execute(this.gameObject);
+            this.right.Execute(this.gameObject);
         }
         if(Input.GetAxis("Horizontal") < -0.01)
         {
-            this.Left.Execute(this.gameObject);
+            this.left.Execute(this.gameObject);
         }
 
         var animator = this.gameObject.GetComponent<Animator>();
         animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x/5.0f));
-        this.Booty.text = "x" + (this.Mushrooms * 1 + this.Gems * 3 + this.Skulls * 2);
+        this.booty.text = "x" + (this.mushrooms * 1 + this.gems * 3 + this.skulls * 2);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,16 +58,38 @@ public class CaptainController : MonoBehaviour
         if (collision.gameObject.tag == "Mushroom")
         {
             Destroy(collision.gameObject);
-            this.Mushrooms++;
+            this.mushrooms++;
         }
         else if (collision.gameObject.tag == "Skull")
         {
             Destroy(collision.gameObject);
-            this.Skulls++;
-        }else if(collision.gameObject.tag == "Gem")
+            this.skulls++;
+        }
+        else if(collision.gameObject.tag == "Gem")
         {
             Destroy(collision.gameObject);
-            this.Gems++;
+            this.gems++;
         }
     }
+
+    // private void OnTriggerEnter2D(Collider2D other) {
+    //     Debug.Log("cap trigger w/ " + other.gameObject.name);
+    //     if(null != other) 
+    //     {
+    //         string trackTitle = "";
+    //         switch(other.gameObject.name)
+    //         {
+    //             case "MushroomForest":
+    //                 trackTitle = "Water";
+    //                 break;
+    //             case "Mountains":
+    //                 trackTitle = "Wind";
+    //                 break;
+    //             case "Graveyard":
+    //                 trackTitle = "Fire";
+    //                 break;
+    //         }
+    //         FindObjectOfType<SoundManager>().PlayMusicTrack(trackTitle);
+    //     }
+    // }
 }
