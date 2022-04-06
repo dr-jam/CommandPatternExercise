@@ -71,25 +71,4 @@ public class CaptainController : MonoBehaviour
             this.gems++;
         }
     }
-
-    // private void OnTriggerEnter2D(Collider2D other) {
-    //     Debug.Log("cap trigger w/ " + other.gameObject.name);
-    //     if(null != other) 
-    //     {
-    //         string trackTitle = "";
-    //         switch(other.gameObject.name)
-    //         {
-    //             case "MushroomForest":
-    //                 trackTitle = "Water";
-    //                 break;
-    //             case "Mountains":
-    //                 trackTitle = "Wind";
-    //                 break;
-    //             case "Graveyard":
-    //                 trackTitle = "Fire";
-    //                 break;
-    //         }
-    //         FindObjectOfType<SoundManager>().PlayMusicTrack(trackTitle);
-    //     }
-    // }
 }

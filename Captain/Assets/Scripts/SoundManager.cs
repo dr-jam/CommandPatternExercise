@@ -5,6 +5,8 @@ using UnityEngine;
 /**
  * Adapted from "Indroduction to AUDIO in Unity" by Brackeys:
  * https://www.youtube.com/watch?v=6OT43pvUyfY
+ *
+ * Audio assets from: https://sirental.itch.io/elemental-dungeons
  */
 
 public class SoundManager : MonoBehaviour
