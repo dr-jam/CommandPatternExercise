@@ -7850,7 +7850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c29e7f6006e364f9093aeaab4e52e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicTrack: Water
+  musicTrack: Fire
 --- !u!4 &1802875505
 Transform:
   m_ObjectHideFlags: 0
@@ -8669,6 +8669,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3423c45944031409af113d0173a230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: -7802871821760928576, guid: 20c2fc25cc8a72d439ece44caa80010d,
+    type: 2}
+  sfxMixerGroup: {fileID: -5514887378846270790, guid: 20c2fc25cc8a72d439ece44caa80010d,
+    type: 2}
   musicTracks:
   - clip: {fileID: 8300000, guid: 693553294ce34f24f93202bc847e69a8, type: 3}
     audioSource: {fileID: 0}
@@ -8694,6 +8698,37 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+  sfxClips:
+  - clip: {fileID: 8300000, guid: 69a3e4be484d93a45a2f3c0ef933508f, type: 3}
+    audioSource: {fileID: 0}
+    title: bomb
+    volume: 1
+    pitch: 1
+    loop: 0
+  - clip: {fileID: 8300000, guid: e2a74b3ffa81b044a95409b38cf1d87b, type: 3}
+    audioSource: {fileID: 0}
+    title: hit
+    volume: 1
+    pitch: 1
+    loop: 0
+  - clip: {fileID: 8300000, guid: 693dd5cf3dc1f154ea014f65ee463e8a, type: 3}
+    audioSource: {fileID: 0}
+    title: bloop
+    volume: 1
+    pitch: 1
+    loop: 0
+  - clip: {fileID: 8300000, guid: 07f1fcd409748ec4484caa5c0e5e2099, type: 3}
+    audioSource: {fileID: 0}
+    title: chop
+    volume: 1
+    pitch: 1
+    loop: 0
+  - clip: {fileID: 8300000, guid: 0fcba1574cb4cb642bdbd80cc0d0d65d, type: 3}
+    audioSource: {fileID: 0}
+    title: clack
+    volume: 1
+    pitch: 1
+    loop: 0
 --- !u!4 &2036187319
 Transform:
   m_ObjectHideFlags: 0

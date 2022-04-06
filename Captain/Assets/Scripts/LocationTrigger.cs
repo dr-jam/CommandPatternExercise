@@ -10,7 +10,6 @@ public class LocationTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter");
         if(other && other.tag == "Captain") 
         {
             FindObjectOfType<SoundManager>().PlayMusicTrack(this.musicTrack);

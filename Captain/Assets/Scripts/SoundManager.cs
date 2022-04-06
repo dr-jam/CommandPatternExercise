@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 /**
  * Adapted from "Indroduction to AUDIO in Unity" by Brackeys:
@@ -12,10 +13,21 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField]
-    private List<MusicTrack> musicTracks;
+    private AudioMixerGroup musicMixerGroup;
 
-    private MusicTrack playing;
-    private MusicTrack fading;
+    [SerializeField]
+    private AudioMixerGroup sfxMixerGroup;
+
+    [SerializeField]
+    private List<SoundClip> musicTracks;
+
+    [SerializeField]
+    private List<SoundClip> sfxClips;
+
+    private SoundClip trackPlaying;
+    private SoundClip trackFading;
+    private SoundClip sfxPlaying;
+
 
     void Awake()
     {
@@ -26,6 +38,17 @@ public class SoundManager : MonoBehaviour
             track.audioSource.volume = track.volume;
             track.audioSource.pitch = track.pitch;
             track.audioSource.loop = track.loop;
+            track.audioSource.outputAudioMixerGroup = this.musicMixerGroup;
+        }
+
+        foreach (var clip in this.sfxClips)
+        {
+            clip.audioSource = this.gameObject.AddComponent<AudioSource>();
+            clip.audioSource.clip = clip.clip;
+            clip.audioSource.volume = clip.volume;
+            clip.audioSource.pitch = clip.pitch;
+            clip.audioSource.loop = clip.loop;
+            clip.audioSource.outputAudioMixerGroup = this.sfxMixerGroup;
         }
     }
 
@@ -38,11 +61,27 @@ public class SoundManager : MonoBehaviour
             Debug.Log("Sound track not found: " + title);
             return;
         }
-        Debug.Log("Playing " + title);
+        
         track.audioSource.Play();
-        if(null != this.playing) {
-            this.playing.audioSource.Stop();
-        }         
-        this.playing = track;
+
+        if(null != this.trackPlaying) {
+            this.trackPlaying.audioSource.Stop();
+        }   
+
+        this.trackPlaying = track;
+    }
+
+
+    public void PlaySoundEffect(string title)
+    {
+        var track = this.sfxClips.Find(track => track.title == title);
+
+        if(null == track) 
+        {
+            Debug.Log("Sound track not found: " + title);
+            return;
+        }
+
+        track.audioSource.Play();
     }
 }

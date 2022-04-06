@@ -25,6 +25,7 @@ namespace Captain.Command
             if (this.active)
             {
                 this.elapsedTime += Time.deltaTime;
+                
                 if (this.elapsedTime > OFFSET)
                 {
                     var contacts = new Collider2D[32];
@@ -48,12 +49,15 @@ namespace Captain.Command
                     }
 
                 }
+
                 this.motivator.GetComponent<Animator>().SetBool("Motivate", this.active);
             }
         }
 
         public void Execute(GameObject gameObject)
         {
+            FindObjectOfType<SoundManager>().PlaySoundEffect("hit");
+
             if(!this.active)
             {
                 this.elapsedTime = 0.0f;
