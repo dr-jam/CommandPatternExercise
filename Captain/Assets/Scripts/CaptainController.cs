@@ -19,8 +19,8 @@ public class CaptainController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.AddComponent<CaptainMotivateCommand>();
-        this.fire1 = this.gameObject.GetComponent<CaptainMotivateCommand>();
+        //this.gameObject.AddComponent<CaptainMotivateCommand>();
+        this.fire1 = gameObject.AddComponent<CaptainMotivateCommand>();
         this.fire2 = ScriptableObject.CreateInstance<DoNothing>();
         this.right = ScriptableObject.CreateInstance<DoNothing>();
         this.left = ScriptableObject.CreateInstance<MoveCharacterLeft>();

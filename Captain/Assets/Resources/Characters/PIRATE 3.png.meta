@@ -198,7 +198,7 @@ TextureImporter:
       213: 21300128
     second: PIRATE 3_64
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -215,9 +215,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -227,8 +230,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -249,9 +252,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -267,6 +276,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1655,9 +1676,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      PIRATE 3_0: 21300000
+      PIRATE 3_1: 21300002
+      PIRATE 3_10: 21300020
+      PIRATE 3_11: 21300022
+      PIRATE 3_12: 21300024
+      PIRATE 3_13: 21300026
+      PIRATE 3_14: 21300028
+      PIRATE 3_15: 21300030
+      PIRATE 3_16: 21300032
+      PIRATE 3_17: 21300034
+      PIRATE 3_18: 21300036
+      PIRATE 3_19: 21300038
+      PIRATE 3_2: 21300004
+      PIRATE 3_20: 21300040
+      PIRATE 3_21: 21300042
+      PIRATE 3_22: 21300044
+      PIRATE 3_23: 21300046
+      PIRATE 3_24: 21300048
+      PIRATE 3_25: 21300050
+      PIRATE 3_26: 21300052
+      PIRATE 3_27: 21300054
+      PIRATE 3_28: 21300056
+      PIRATE 3_29: 21300058
+      PIRATE 3_3: 21300006
+      PIRATE 3_30: 21300060
+      PIRATE 3_31: 21300062
+      PIRATE 3_32: 21300064
+      PIRATE 3_33: 21300066
+      PIRATE 3_34: 21300068
+      PIRATE 3_35: 21300070
+      PIRATE 3_36: 21300072
+      PIRATE 3_37: 21300074
+      PIRATE 3_38: 21300076
+      PIRATE 3_39: 21300078
+      PIRATE 3_4: 21300008
+      PIRATE 3_40: 21300080
+      PIRATE 3_41: 21300082
+      PIRATE 3_42: 21300084
+      PIRATE 3_43: 21300086
+      PIRATE 3_44: 21300088
+      PIRATE 3_45: 21300090
+      PIRATE 3_46: 21300092
+      PIRATE 3_47: 21300094
+      PIRATE 3_48: 21300096
+      PIRATE 3_49: 21300098
+      PIRATE 3_5: 21300010
+      PIRATE 3_50: 21300100
+      PIRATE 3_51: 21300102
+      PIRATE 3_52: 21300104
+      PIRATE 3_53: 21300106
+      PIRATE 3_54: 21300108
+      PIRATE 3_55: 21300110
+      PIRATE 3_56: 21300112
+      PIRATE 3_57: 21300114
+      PIRATE 3_58: 21300116
+      PIRATE 3_59: 21300118
+      PIRATE 3_6: 21300012
+      PIRATE 3_60: 21300120
+      PIRATE 3_61: 21300122
+      PIRATE 3_62: 21300124
+      PIRATE 3_63: 21300126
+      PIRATE 3_64: 21300128
+      PIRATE 3_7: 21300014
+      PIRATE 3_8: 21300016
+      PIRATE 3_9: 21300018
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
