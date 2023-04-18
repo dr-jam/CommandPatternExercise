@@ -6,7 +6,8 @@ public class TeleportCaptain : MonoBehaviour
 {
 
     public GameObject DestinationLevel;
-    public Camera MainCamera;
+    [SerializeField]
+    private Camera MainCamera;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
