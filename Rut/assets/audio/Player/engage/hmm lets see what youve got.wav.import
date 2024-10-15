@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2ilw7ggpd2q5"
+path="res://.godot/imported/hmm lets see what youve got.wav-23bd575c413bbfd7764abf20132b7582.sample"
+
+[deps]
+
+source_file="res://assets/audio/Player/engage/hmm lets see what youve got.wav"
+dest_files=["res://.godot/imported/hmm lets see what youve got.wav-23bd575c413bbfd7764abf20132b7582.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

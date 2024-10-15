@@ -1,0 +1,45 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bht0usflt03vs"]
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_a8b8r"]
+resource_name = "PitchShift"
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_7a0to"]
+resource_name = "Amplify"
+volume_db = 11.04
+
+[resource]
+bus/0/volume_db = -3.92283
+bus/1/name = &"environment"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 1.25825
+bus/1/send = &"Master"
+bus/2/name = &"music"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"sfx"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -3.61539
+bus/3/send = &"Master"
+bus/4/name = &"boss"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -0.659333
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectPitchShift_a8b8r")
+bus/4/effect/0/enabled = true
+bus/5/name = &"speach"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 6.02
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectAmplify_7a0to")
+bus/5/effect/0/enabled = false

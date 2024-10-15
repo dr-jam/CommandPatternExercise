@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2jyootm25l47"]
+
+[ext_resource type="Script" path="res://scripts/hit_box.gd" id="1_wve2v"]
+[ext_resource type="AudioStream" uid="uid://bdj1mljgdrkiy" path="res://assets/audio/poison_gurgle_Fumaroles.ogg" id="2_5fd0h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yt4wo"]
+radius = 6.0
+
+[sub_resource type="Gradient" id="Gradient_1oyot"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.315353, 0.539419)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sm6gc"]
+gradient = SubResource("Gradient_1oyot")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="PoisonZone" type="Area2D"]
+script = ExtResource("1_wve2v")
+damage = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yt4wo")
+
+[node name="PoisonPlantGlow" type="PointLight2D" parent="."]
+position = Vector2(-1.19209e-07, 0)
+scale = Vector2(0.46875, 0.515625)
+color = Color(0.984314, 0, 1, 1)
+energy = 2.38
+texture = SubResource("GradientTexture2D_sm6gc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5fd0h")
+autoplay = true
+attenuation = 12.1257
+parameters/looping = true

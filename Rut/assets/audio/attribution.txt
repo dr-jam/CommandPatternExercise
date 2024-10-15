@@ -1,0 +1,20 @@
+The following files are from the National Park Service's Yellowstone Audio Library (https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm):
+	enironmental_track.mp3
+	poison-dragonsmouth.ogg
+	poison_gugle_Fumaroles.ogg
+	sad-yell.ogg
+	yell1.ogg
+	yell2.ogg
+	yell3.ogg
+
+
+The Player folder audio was originally created by Kerstyn Unger:
+https://kerstynungervo.itch.io/custom-voice-resource
+CC BY-NC-SA  :  (Attribution-NonCommercial-ShareAlike) 
+
+
+Mike Koenig
+Blast.ogg
+Attribution 3.0
+Gain lowered by 8db in Audacity.
+https://soundbible.com/538-Blast.html

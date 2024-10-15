@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3kbvsmkip3o1"
+path="res://.godot/imported/i will make you wish you were never born.wav-8bbcf2b418e206862cef9c95326983b8.sample"
+
+[deps]
+
+source_file="res://assets/audio/Player/engage/i will make you wish you were never born.wav"
+dest_files=["res://.godot/imported/i will make you wish you were never born.wav-8bbcf2b418e206862cef9c95326983b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

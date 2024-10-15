@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ki4kklmre6aa"
+path="res://.godot/imported/i detest the taste of my own blood youll pay for this.wav-79c158d63201cde59e682a492b6ed99f.sample"
+
+[deps]
+
+source_file="res://assets/audio/Player/defeat/i detest the taste of my own blood youll pay for this.wav"
+dest_files=["res://.godot/imported/i detest the taste of my own blood youll pay for this.wav-79c158d63201cde59e682a492b6ed99f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

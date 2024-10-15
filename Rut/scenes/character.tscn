@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://hfgqbrly7kqq"]
+
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_0r01g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egkji"]
+radius = 0.791226
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_0r01g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(19, 19)
+shape = SubResource("CircleShape2D_egkji")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

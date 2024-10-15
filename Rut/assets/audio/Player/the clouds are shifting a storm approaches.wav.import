@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgs0llbxcqx2p"
+path="res://.godot/imported/the clouds are shifting a storm approaches.wav-fa83fdb67423435fe94cb4b1d6618040.sample"
+
+[deps]
+
+source_file="res://assets/audio/Player/the clouds are shifting a storm approaches.wav"
+dest_files=["res://.godot/imported/the clouds are shifting a storm approaches.wav-fa83fdb67423435fe94cb4b1d6618040.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

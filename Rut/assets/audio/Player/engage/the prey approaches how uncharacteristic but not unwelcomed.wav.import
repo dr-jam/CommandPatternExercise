@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6c1uaikn7v6p"
+path="res://.godot/imported/the prey approaches how uncharacteristic but not unwelcomed.wav-6a2a82bcfdac7f3bda4139e9926a3044.sample"
+
+[deps]
+
+source_file="res://assets/audio/Player/engage/the prey approaches how uncharacteristic but not unwelcomed.wav"
+dest_files=["res://.godot/imported/the prey approaches how uncharacteristic but not unwelcomed.wav-6a2a82bcfdac7f3bda4139e9926a3044.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
