@@ -2,7 +2,7 @@
 
 ## Description
 
-The goals behind this project are 1) to allow for meaningful gameplay gameplay programming inside a Unity project, and 2) 
+The goals behind this project are 1) to allow for meaningful gameplay gameplay programming inside a Godot project, and 2) 
 to provide working experience with the command software design pattern. This project is filled with examples of using Unity 
 to construct basic game systems including health, hit/hurt boxes, player movement, non-player character behavior,
 parallax scrolling, character movement, a camera that follows the player, animated sprites, boss fights, 
