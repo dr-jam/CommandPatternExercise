@@ -102,4 +102,8 @@ To help coordinate these commands, you may wish to use the [cutscene_manager.gd]
 
 Make your own boss battle. This is your opportunity to perform self-directed, design-driven gameplay programming. You can implement something as simple as a boss that moves, jumps, and attacks. Or you could make something as elaborate as special moves, life regeneration, damage-absorbing shields made of bone, or a dialogue system to negotiate with the spirit to solve the conflict without violence. Be sure that your boss battle logic uses command lists, is winnable by the player, and follows one of the most essential rules for NPCs: it should always be doing something! Describe your boss battle in a comment near your implementation. This description is for your peer reviewer, so make it clear and communicative.
 
+- The boss should always be acting.
+- The boss should be competent. This could mean dynamic targeting or some additional scripted and threatening behavior.
+- Visual and auditory effects. 
+
 Good luck!
