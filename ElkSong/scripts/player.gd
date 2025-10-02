@@ -8,7 +8,6 @@ var _dead:bool = false
 
 @onready var animation_tree:AnimationTree = $AnimationTree
 
-
 func _ready():
 	animation_tree.active = true
 	bind_player_input_commands()
@@ -51,6 +50,45 @@ func take_damage(damage:int) -> void:
 		_play($Audio/hurt)
 
 
+func bind_player_input_commands():
+	right_cmd = MoveRightCommand.new()
+	left_cmd = MoveLeftCommand.new()
+	up_cmd = IdleCommand.new()
+	fire1 = AttackCommand.new()
+	idle = IdleCommand.new()
+
+
+func unbind_player_input_commands():
+	right_cmd = IdleCommand.new()
+	left_cmd = IdleCommand.new()
+	up_cmd = IdleCommand.new()
+	fire1 = IdleCommand.new()
+	idle = IdleCommand.new()
+
+
+func resurrect() -> void:
+	_dead = false
+	health = 100
+	animation_tree.active = true
+	var sm:AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
+	command_callback("undeath")
+	sm.travel("summon")
+
+
+func command_callback(cmd_name:String) -> void:
+	if "attack" == cmd_name:
+		_play($Audio/attack)
+		
+	if "jump" == cmd_name:
+		_play($Audio/jump)
+		
+	if "engage" == cmd_name:
+		_play($Audio/engage)
+		
+	if "undeath" == cmd_name:
+		_play($Audio/undeath)
+
+
 #Logic to support the state machine in the AnimationTree
 func _manage_animation_tree_state() -> void:
 	if !is_zero_approx(velocity.x):
@@ -80,42 +118,6 @@ func _manage_animation_tree_state() -> void:
 	else:
 		animation_tree["parameters/conditions/damaged"] = false
 
-
-func bind_player_input_commands():
-	right_cmd = MoveRightCommand.new()
-	left_cmd = MoveLeftCommand.new()
-	up_cmd = Command.new()
-	fire1 = AttackCommand.new()
-	idle = IdleCommand.new()
-
-
-func unbind_player_input_commands():
-	right_cmd = Command.new()
-	left_cmd = Command.new()
-	up_cmd = Command.new()
-	fire1 = Command.new()
-	idle = Command.new()
-
-func resurrect() -> void:
-		_dead = false
-		health = 100
-		animation_tree.active = true
-		var sm:AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
-		command_callback("undeath")
-		sm.travel("summon")
-
-func command_callback(cmd_name:String) -> void:
-	if "attack" == cmd_name:
-		_play($Audio/attack)
-		
-	if "jump" == cmd_name:
-		_play($Audio/jump)
-		
-	if "engage" == cmd_name:
-		_play($Audio/engage)
-		
-	if "undeath" == cmd_name:
-		_play($Audio/undeath)
 
 func _play(player:AudioStreamPlayer2D) -> void:
 	if !player.playing:

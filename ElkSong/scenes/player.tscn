@@ -1,13 +1,13 @@
 [gd_scene load_steps=71 format=3 uid="uid://ieh4gkol4wgi"]
 
 [ext_resource type="PackedScene" uid="uid://hfgqbrly7kqq" path="res://scenes/character.tscn" id="1_0vso3"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_f8ptl"]
-[ext_resource type="Script" path="res://scripts/hurt_box.gd" id="3_ij544"]
+[ext_resource type="Script" uid="uid://b3uekb5mnifvl" path="res://scripts/player.gd" id="2_f8ptl"]
+[ext_resource type="Script" uid="uid://bscq5auop0jty" path="res://scripts/hurt_box.gd" id="3_ij544"]
 [ext_resource type="Texture2D" uid="uid://hl6nx2rcsep1" path="res://assets/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" id="3_xwjht"]
-[ext_resource type="Script" path="res://scripts/character_facing.gd" id="4_d8pyt"]
-[ext_resource type="Script" path="res://scripts/hit_box.gd" id="4_oeo3d"]
-[ext_resource type="Script" path="res://scripts/debug_player.gd" id="7_1qojy"]
-[ext_resource type="Script" path="res://scripts/cheat_res.gd" id="8_xpkoe"]
+[ext_resource type="Script" uid="uid://bflkp0b3pkvn" path="res://scripts/character_facing.gd" id="4_d8pyt"]
+[ext_resource type="Script" uid="uid://c4a82oqmiaaru" path="res://scripts/hit_box.gd" id="4_oeo3d"]
+[ext_resource type="Script" uid="uid://bkairbwnbmwlh" path="res://scripts/debug_player.gd" id="7_1qojy"]
+[ext_resource type="Script" uid="uid://cqlwqlyjars15" path="res://scripts/cheat_res.gd" id="8_xpkoe"]
 [ext_resource type="AudioStream" uid="uid://cvwk4qede4hur" path="res://assets/audio/Player/attack/hyaa.wav" id="9_4eky8"]
 [ext_resource type="AudioStream" uid="uid://c12f5yo8b4s6h" path="res://assets/audio/Player/attack/urk.wav" id="10_jguyy"]
 [ext_resource type="AudioStream" uid="uid://ki4kklmre6aa" path="res://assets/audio/Player/defeat/i detest the taste of my own blood youll pay for this.wav" id="11_5l8uq"]
@@ -207,15 +207,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gvtq2"]
 _data = {
-"RESET": SubResource("Animation_cxd8d"),
-"attack": SubResource("Animation_2342b"),
-"death": SubResource("Animation_xy6nu"),
-"fall": SubResource("Animation_v1pse"),
-"hurt": SubResource("Animation_g3eea"),
-"idle": SubResource("Animation_ikpdq"),
-"jump": SubResource("Animation_7kj25"),
-"move": SubResource("Animation_a6ghk"),
-"summon": SubResource("Animation_5ebac")
+&"RESET": SubResource("Animation_cxd8d"),
+&"attack": SubResource("Animation_2342b"),
+&"death": SubResource("Animation_xy6nu"),
+&"fall": SubResource("Animation_v1pse"),
+&"hurt": SubResource("Animation_g3eea"),
+&"idle": SubResource("Animation_ikpdq"),
+&"jump": SubResource("Animation_7kj25"),
+&"move": SubResource("Animation_a6ghk"),
+&"summon": SubResource("Animation_5ebac")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_si3b8"]
@@ -337,7 +337,7 @@ states/move/position = Vector2(651.951, 90.2593)
 states/summon/node = SubResource("AnimationNodeAnimation_kvs7y")
 states/summon/position = Vector2(328.667, 90.9219)
 transitions = ["Start", "summon", SubResource("AnimationNodeStateMachineTransition_wxd56"), "summon", "idle", SubResource("AnimationNodeStateMachineTransition_7d62j"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_gswdu"), "jump", "idle", SubResource("AnimationNodeStateMachineTransition_6ainl"), "idle", "move", SubResource("AnimationNodeStateMachineTransition_5ve2i"), "move", "idle", SubResource("AnimationNodeStateMachineTransition_chp8s"), "jump", "attack", SubResource("AnimationNodeStateMachineTransition_iver4"), "attack", "jump", SubResource("AnimationNodeStateMachineTransition_ks51r"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_o2o7b"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_o2ir5"), "move", "attack", SubResource("AnimationNodeStateMachineTransition_q3ado"), "attack", "move", SubResource("AnimationNodeStateMachineTransition_kxtk4"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_ebmcw"), "jump", "hurt", SubResource("AnimationNodeStateMachineTransition_s7xdr"), "attack", "hurt", SubResource("AnimationNodeStateMachineTransition_ojhnm"), "move", "hurt", SubResource("AnimationNodeStateMachineTransition_f1kcu"), "hurt", "idle", SubResource("AnimationNodeStateMachineTransition_7fgvm"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_d8hyv")]
-graph_offset = Vector2(-18, -127)
+graph_offset = Vector2(38, -102)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3x1i3"]
 playback_mode = 1
@@ -388,14 +388,13 @@ stream_2/stream = ExtResource("25_te3n2")
 stream_3/stream = ExtResource("26_cilj4")
 
 [node name="CharacterBody2D" instance=ExtResource("1_0vso3")]
-position = Vector2(1, 0)
 collision_layer = 3
 script = ExtResource("2_f8ptl")
 health = 100
 
 [node name="AnimationPlayer" parent="." index="0"]
 libraries = {
-"": SubResource("AnimationLibrary_gvtq2")
+&"": SubResource("AnimationLibrary_gvtq2")
 }
 autoplay = "idle"
 

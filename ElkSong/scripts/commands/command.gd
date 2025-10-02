@@ -1,4 +1,4 @@
-class_name Command
+@abstract class_name Command
 
 enum Status {
 	ACTIVE,
@@ -6,5 +6,4 @@ enum Status {
 	ERROR,
 }
 
-func execute(_character: Character) -> Status:
-	return Status.DONE
+@abstract func execute(_character: Character) -> Status

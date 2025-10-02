@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2jyootm25l47"]
 
-[ext_resource type="Script" path="res://scripts/hit_box.gd" id="1_wve2v"]
+[ext_resource type="Script" uid="uid://c4a82oqmiaaru" path="res://scripts/hit_box.gd" id="1_wve2v"]
 [ext_resource type="AudioStream" uid="uid://bdj1mljgdrkiy" path="res://assets/audio/poison_gurgle_Fumaroles.ogg" id="2_5fd0h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt4wo"]

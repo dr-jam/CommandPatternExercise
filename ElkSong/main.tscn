@@ -1,14 +1,14 @@
 [gd_scene load_steps=22 format=4 uid="uid://c0tx6m2kebipl"]
 
 [ext_resource type="Texture2D" uid="uid://gyo77jhww4vh" path="res://assets/Country-village_asset_pack/1_Tileset & props/country village tileset.png" id="1_rol16"]
-[ext_resource type="Script" path="res://scripts/cutscene_manager.gd" id="1_xvj3d"]
+[ext_resource type="Script" uid="uid://bc2usscop15d6" path="res://scripts/cutscene_manager.gd" id="1_xvj3d"]
 [ext_resource type="PackedScene" uid="uid://ieh4gkol4wgi" path="res://scenes/player.tscn" id="2_3jej6"]
 [ext_resource type="Texture2D" uid="uid://ccjv3q1s5a053" path="res://assets/Country-village_asset_pack/1_Tileset & props/Country_village_props.png" id="3_jcfoe"]
 [ext_resource type="PackedScene" uid="uid://cfulknqm6aesj" path="res://scenes/boss.tscn" id="3_unsdm"]
 [ext_resource type="PackedScene" uid="uid://ye6qpsg2526j" path="res://scenes/follower.tscn" id="4_3ud7h"]
 [ext_resource type="Texture2D" uid="uid://b5ldlbg5mbdb8" path="res://assets/Mondstadt Background Wallpaper/windrise-background.png" id="5_38nle"]
-[ext_resource type="Script" path="res://scripts/boss_encounter_trigger.gd" id="6_hqtfd"]
-[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="7_36wh0"]
+[ext_resource type="Script" uid="uid://cn1i2ppwtqql8" path="res://scripts/boss_encounter_trigger.gd" id="6_hqtfd"]
+[ext_resource type="Script" uid="uid://ctoor5hx3hgn5" path="res://scripts/camera_controller.gd" id="7_36wh0"]
 [ext_resource type="PackedScene" uid="uid://dn4ms5ydpk4bk" path="res://scenes/dialogue_box.tscn" id="9_v5ph2"]
 [ext_resource type="PackedScene" uid="uid://c2jyootm25l47" path="res://scenes/poison_zone.tscn" id="10_3p4mq"]
 [ext_resource type="AudioStream" uid="uid://dr1tph4c00x73" path="res://assets/audio/environmental_track.mp3" id="11_yc25s"]
@@ -646,6 +646,7 @@ position = Vector2(2882, 389)
 [node name="MainCamera" type="Camera2D" parent="." node_paths=PackedStringArray("subject")]
 unique_name_in_owner = true
 position = Vector2(524, 417)
+process_callback = 0
 position_smoothing_enabled = true
 script = ExtResource("7_36wh0")
 floating_offset = Vector2(0, -100)

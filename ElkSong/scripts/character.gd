@@ -52,6 +52,24 @@ func _ready() -> void:
 	change_facing(facing)
 
 
+func move(value: float) -> void:
+	_horizontal_input = value
+
+
+func change_facing(new_facing:Facing) -> void:
+	facing = new_facing
+	emit_signal("CharacterDirectionChange", facing)
+
+
+#This function is meant to be called in the AnimationController after the each relevant anmiation has concluded.
+func clear_action_state() -> void:
+	attacking = false
+	summoning = false
+
+func command_callback(_name:String) -> void:
+	pass
+
+
 func _physics_process(delta: float) -> void: 
 	_apply_gravity(delta)
 	_apply_movement(delta)
@@ -63,20 +81,3 @@ func _apply_movement(_delta: float):
 
 func _apply_gravity(delta : float) -> void:
 	velocity.y = minf(TERMINAL_VELOCITY, velocity.y + gravity * delta)
-
-
-func move(value: float) -> void:
-	_horizontal_input = value
-
-
-func change_facing(new_facing:Facing) -> void:
-	facing = new_facing
-	emit_signal("CharacterDirectionChange", facing)
-
-#This function is meant to be called in the AnimationController after the each relevant anmiation has concluded.
-func clear_action_state() -> void:
-	attacking = false
-	summoning = false
-
-func command_callback(_name:String) -> void:
-	pass
