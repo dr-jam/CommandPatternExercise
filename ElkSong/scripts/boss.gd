@@ -14,6 +14,7 @@ func _ready() -> void:
 	jump_velocity = -600
 	movement_speed = 400
 	$Sprite2D.visible = false
+	facing = Facing.LEFT
 
 
 func _process(_delta):
