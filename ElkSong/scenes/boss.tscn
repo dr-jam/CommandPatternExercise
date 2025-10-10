@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://hfgqbrly7kqq" path="res://scenes/character.tscn" id="1_ewf04"]
 [ext_resource type="Texture2D" uid="uid://dx1j5dc1rgog3" path="res://assets/Bringer-Of-Death/SpriteSheet/Bringer-of-Death-SpritSheet.png" id="2_2jk0f"]
-[ext_resource type="Script" path="res://scripts/boss.gd" id="2_tgd37"]
-[ext_resource type="Script" path="res://scripts/character_facing.gd" id="3_ojacg"]
-[ext_resource type="Script" path="res://scripts/hit_box.gd" id="3_yp2xn"]
-[ext_resource type="Script" path="res://scripts/hurt_box.gd" id="4_vabi4"]
+[ext_resource type="Script" uid="uid://btwajsqvd6ph6" path="res://scripts/boss.gd" id="2_tgd37"]
+[ext_resource type="Script" uid="uid://bflkp0b3pkvn" path="res://scripts/character_facing.gd" id="3_ojacg"]
+[ext_resource type="Script" uid="uid://c4a82oqmiaaru" path="res://scripts/hit_box.gd" id="3_yp2xn"]
+[ext_resource type="Script" uid="uid://bscq5auop0jty" path="res://scripts/hurt_box.gd" id="4_vabi4"]
 [ext_resource type="AudioStream" uid="uid://bhj88oc17qhdw" path="res://assets/audio/yell1.ogg" id="7_0m7xl"]
 [ext_resource type="AudioStream" uid="uid://b6rf2pcpat2tu" path="res://assets/audio/yell2.ogg" id="8_2cll6"]
 [ext_resource type="AudioStream" uid="uid://hr7gtu8cmwdy" path="res://assets/audio/yell3.ogg" id="9_kqjmx"]
@@ -237,12 +237,12 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1deq8"]
 _data = {
-"RESET": SubResource("Animation_4wvcn"),
-"attack": SubResource("Animation_j475d"),
-"idle": SubResource("Animation_bk0cr"),
-"jump": SubResource("Animation_ipvyb"),
-"move": SubResource("Animation_2ymqn"),
-"summon": SubResource("Animation_cxvga")
+&"RESET": SubResource("Animation_4wvcn"),
+&"attack": SubResource("Animation_j475d"),
+&"idle": SubResource("Animation_bk0cr"),
+&"jump": SubResource("Animation_ipvyb"),
+&"move": SubResource("Animation_2ymqn"),
+&"summon": SubResource("Animation_cxvga")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8x0p3"]
@@ -290,7 +290,7 @@ script = ExtResource("2_tgd37")
 
 [node name="AnimationPlayer" parent="." index="0"]
 libraries = {
-"": SubResource("AnimationLibrary_1deq8")
+&"": SubResource("AnimationLibrary_1deq8")
 }
 autoplay = "idle"
 

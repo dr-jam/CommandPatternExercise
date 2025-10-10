@@ -21,7 +21,14 @@ func _process(_delta):
 		if !animation_player.is_playing():
 			sprite.visible = false
 		return
-		
+	
+	if Facing.LEFT == facing:
+		scale.y = 1.0
+		rotation_degrees = 0.0
+	elif Facing.RIGHT == facing:
+		scale.y = -1.0
+		rotation_degrees = 180.0
+	
 	if len(cmd_list)>0:
 		var command_status:Command.Status = cmd_list.front().execute(self)
 		#if command_status == Command.Status.ACTIVE:

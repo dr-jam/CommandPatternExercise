@@ -447,14 +447,15 @@ offset_bottom = -54.0
 text = "debug"
 script = ExtResource("7_1qojy")
 
-[node name="AudioListener2D" type="AudioListener2D" parent="Debug" index="0"]
+[node name="AudioListener2D" type="AudioListener2D" parent="." index="6"]
+position = Vector2(-23, -77)
 current = true
 
-[node name="CheatRes" type="Node2D" parent="." index="6"]
+[node name="CheatRes" type="Node2D" parent="." index="7"]
 position = Vector2(-1, 0)
 script = ExtResource("8_xpkoe")
 
-[node name="AnimationTree" type="AnimationTree" parent="." index="7"]
+[node name="AnimationTree" type="AnimationTree" parent="." index="8"]
 tree_root = SubResource("AnimationNodeStateMachine_2p387")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/attacking = false
@@ -464,7 +465,7 @@ parameters/conditions/jumping = false
 parameters/conditions/moving = false
 parameters/conditions/on_floor = false
 
-[node name="Audio" type="Node2D" parent="." index="8"]
+[node name="Audio" type="Node2D" parent="." index="9"]
 
 [node name="attack" type="AudioStreamPlayer2D" parent="Audio" index="0"]
 position = Vector2(1, 0)

@@ -9,6 +9,7 @@ func _init(duration:float):
 
 func execute(character:Character) -> Status:
 	character.velocity.x = character.movement_speed
+	character.change_facing(Character.Facing.RIGHT)
 	var status:Command.Status = _manage_durative_animation_command(character, "move", _duration)
 	if status == Status.DONE:
 		character.velocity.x = 0
