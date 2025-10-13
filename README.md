@@ -36,7 +36,7 @@ func execute(_character: Character) -> Status:
 ```
 
 There are two main categories of `Commands` used by the Characters. One is used by `Player` to handle the player's input in real time. It relies on the physics system, the `AnimationTree` in the `Player` scene, and a state machine embedded in the `AnimationTree.`  
-The second category is commands with durations. NPCs use these to ensure character actions are correctly timed. They are also used in command lists (seen as `cmd_list` in [boss.gd](Rut/scripts/boss.gd) to sequence actions for use in cutscenes and scripted boss battles. The following code fragment shows the processing engine of command lists and how they interact with `Command.Status` `enum` values.  
+The second category is commands with durations. NPCs use these to ensure character actions are correctly timed. They are also used in command lists (seen as `cmd_list` in [boss.gd](Elksong/scripts/boss.gd) to sequence actions for use in cutscenes and scripted boss battles. The following code fragment shows the processing engine of command lists and how they interact with `Command.Status` `enum` values.  
 
 ```gdscript
 	if len(cmd_list)>0:
@@ -88,7 +88,7 @@ This game prototype needs some narrative design. Your task is to create a cutsce
 - The `Player`, `Follower`, and `Boss` should each have `cmd_list` that contains their actions during the cutscene. Please be aware that actions taken by cutscene-controlled characters need to have a duration (most of the `Player`s commands did not have to account for duration). Please consult the classes that `extend DurativeAnimationCommand` to see how to create and use commands with durations.
 - Be sure to disable the `Player`'s input before the cutscene starts and enable it before the boss battle. See `bind_player_input_commands()` and `unbind_player_input_commands()` in the `player.gd`.
 
-For examples of how the command lists work, see the paired `BossEncounterTrigger` (in [boss_encounter_trigger.gd](Rut/scripts/boss_encounter_trigger.gd)) and `Boss` classes. The `BossEncounterTrigger` is attached to the `Area2D` trigger named `BossEncounterTrigger` in the `Main` scene. It is responsible for detecting when the `Player` is in the `Boss`s room and configuring the user interface for the boss encounter (e.g., the cutscene followed by the boss battle).
+For examples of how the command lists work, see the paired `BossEncounterTrigger` (in [boss_encounter_trigger.gd](Elksong/scripts/boss_encounter_trigger.gd)) and `Boss` classes. The `BossEncounterTrigger` is attached to the `Area2D` trigger named `BossEncounterTrigger` in the `Main` scene. It is responsible for detecting when the `Player` is in the `Boss`s room and configuring the user interface for the boss encounter (e.g., the cutscene followed by the boss battle).
 
 Your work will be assessed on the following criteria:
 - The number of unique durative commands across the characters. Less than eight types may result in a point deduction.
@@ -96,7 +96,7 @@ Your work will be assessed on the following criteria:
 - Are the transitions to the cutscene and from the cutscene to the boss battle technically sound.
 - **Bonus**: Telling an interesting tale.
 
-To help coordinate these commands, you may wish to use the [cutscene_manager.gd](Rut/scripts/cutscene_manager.gd) as a central control mechanism.
+To help coordinate these commands, you may wish to use the [cutscene_manager.gd](Elksong/scripts/cutscene_manager.gd) as a central control mechanism.
 
 ## Stage 4: Boss Mechanics
 
