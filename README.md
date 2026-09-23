@@ -17,7 +17,7 @@ Your project will be score according to the following 70-point system:
 The remaining 30 points will be based on your peer review of a classmate's programming exercise submission.
 
 ### The Command Pattern ###
-
+	
 Knowing the command software design pattern is critical to completing this assignment. Please consult the class recordings and readings to refresh yourself on the basic implementation details and use case for the pattern.  
 
 For this project, the core of the command pattern can be found in [command.gd](ElkSong/scripts/commands/command.gd). The two most important items to note are the structure of the `execute(character:Character) -> Status` function and the `enum Status`. The `execute()` function is the common interface that all commands in the project rely on. The return values of the commands are regularized with the `ACTIVE`, `DONE`, and `ERROR` values with the `Status` `enum`. 

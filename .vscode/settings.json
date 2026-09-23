@@ -1,0 +1,10 @@
+{
+    "godotTools.editorPath.godot4": "/Applications/Godot.app",
+    "chat.tools.terminal.autoApprove": {
+        "\"/Applications/Godot.app/Contents/MacOS/Godot\"": true,
+        "/^cd /Users/jamccoy/git/CommandPatternExercise/ElkSong && \"/Applications/Godot\\.app/Contents/MacOS/Godot\" --headless --path \\. -s addons/gdUnit4/bin/GdUnitCmdTool\\.gd -a test/follow_command_test\\.gd --ignoreHeadlessMode 2>&1 \\| tail -100$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

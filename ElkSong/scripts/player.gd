@@ -21,8 +21,6 @@ func _physics_process(delta: float):
 	var move_input = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 
 	#Stage1 - handle jump input and commands here.
-	if Input.is_action_just_pressed("jump"):
-		up_cmd.execute(self)
 
 
 	if Input.is_action_just_pressed("attack"):
