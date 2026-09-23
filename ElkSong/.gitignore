@@ -15,4 +15,4 @@ data_*/
 mono_crash.*.json
 
 # GDUnit4 Test Results
-Results/
+reports/
