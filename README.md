@@ -106,7 +106,7 @@ Good luck!
 
 This exercise uses the course competency system instead of points.
 
-Completing the required stages gives you a default set of competencies. You may also make **up to three additional claims** at the **Developed** or **Mastery** level.
+Completing the required stages gives you a default set of competencies. You may also make up to three additional claims at the Developed or Mastery level.
 
 ### Default Competencies
 
@@ -136,27 +136,21 @@ Point to specific files, tests, commits, or features. Keep the explanation short
 
 ### Developed
 
-A Developed claim should show that you can use the competency in a changed or less-guided situation.
-
-In general:
-
-- make a meaningful implementation or design decision;
-- go beyond the supplied example or required minimum;
-- verify that the result works;
-- deal with at least one nontrivial case; and
-- explain why you chose your approach.
+A Developed claim should show that you can use the competency in a changed or less-guided situation:
+- make a meaningful implementation or design decision
+- go beyond the supplied example or required minimum
+- verify that the result works
+- deal with at least one nontrivial case
+- explain why you chose your approach
 
 ### Mastery
 
-A Mastery claim should show independent technical judgment.
-
-In general:
-
-- identify a real problem or limitation yourself;
-- design and implement your own solution;
-- consider at least one reasonable alternative;
-- test normal and failure cases; and
-- explain the tradeoffs of your approach.
+A Mastery claim should show independent technical judgment:
+- identify a real problem or limitation yourself
+- design and implement your own solution
+- consider at least one reasonable alternative
+- test normal and failure cases
+- explain the tradeoffs of your approach
 
 More code does not automatically mean Mastery.
 
