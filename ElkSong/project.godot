@@ -8,11 +8,19 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="CommandExercise"
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[audio]
+
+buses/default_bus_layout="uid://bht0usflt03vs"
 
 [debug]
 
@@ -24,10 +32,15 @@ gdscript/warnings/unused_signal=0
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/resizable=false
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
 project/assembly_name="CommandExercise"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg")
 
 [input]
 
@@ -44,12 +57,6 @@ move_left={
 attack={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(86, 1),"global_position":Vector2(95, 47),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":true,"script":null)
-]
-}
-jump={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
 cheat1={

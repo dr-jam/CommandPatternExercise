@@ -1,23 +1,18 @@
 # Programming Excercise 1: Command Pattern
 
+## Competency Claims
+(insert your competency claims here)  
 ## Description
 
-The goals behind this project are 1) to allow for meaningful gameplay gameplay programming inside a Godot project, and 2) 
-to provide working experience with the command software design pattern. This project is filled with examples of using Unity 
+The goals behind this project are 1) to allow for meaningful gameplay programming inside a Godot project, and 2) 
+to provide working experience with the command software design pattern. This project is filled with examples of using Godot 
 to construct basic game systems including health, hit/hurt boxes, player movement, non-player character behavior,
 parallax scrolling, character movement, a camera that follows the player, animated sprites, boss fights, 
 and commands using the Command software design pattern.
 
-Your project will be score according to the following 70-point system:
-* [10 points] Stage 1 
-* [30 points] Stage 2
-* [15 points] Stage 3
-* [15 points] Stage 4
-
-The remaining 30 points will be based on your peer review of a classmate's programming exercise submission.
 
 ### The Command Pattern ###
-
+	
 Knowing the command software design pattern is critical to completing this assignment. Please consult the class recordings and readings to refresh yourself on the basic implementation details and use case for the pattern.  
 
 For this project, the core of the command pattern can be found in [command.gd](ElkSong/scripts/commands/command.gd). The two most important items to note are the structure of the `execute(character:Character) -> Status` function and the `enum Status`. The `execute()` function is the common interface that all commands in the project rely on. The return values of the commands are regularized with the `ACTIVE`, `DONE`, and `ERROR` values with the `Status` `enum`. 
@@ -91,10 +86,10 @@ This game prototype needs some narrative design. Your task is to create a cutsce
 For examples of how the command lists work, see the paired `BossEncounterTrigger` (in [boss_encounter_trigger.gd](ElkSong/scripts/boss_encounter_trigger.gd)) and `Boss` classes. The `BossEncounterTrigger` is attached to the `Area2D` trigger named `BossEncounterTrigger` in the `Main` scene. It is responsible for detecting when the `Player` is in the `Boss`s room and configuring the user interface for the boss encounter (e.g., the cutscene followed by the boss battle).
 
 Your work will be assessed on the following criteria:
-- The number of unique durative commands across the characters. Less than eight types may result in a point deduction.
+- The number of unique durative commands across the characters. Less than eight types may result a lower competency level.
 - How well synced the three characters' commands are to one another.
 - Are the transitions to the cutscene and from the cutscene to the boss battle technically sound.
-- **Bonus**: Telling an interesting tale.
+- The telling of an interesting tale.
 
 To help coordinate these commands, you may wish to use the [cutscene_manager.gd](ElkSong/scripts/cutscene_manager.gd) as a central control mechanism.
 
@@ -107,3 +102,100 @@ Make your own boss battle. This is your opportunity to perform self-directed, de
 - Visual and auditory effects. 
 
 Good luck!
+
+
+## Competency Assessment
+
+This exercise uses the course competency system instead of points. Completing the required stages gives you a default set of competencies. You may also make up to three additional claims at the Developed or Mastery level.
+
+### Default Competencies
+
+| Stage | Competencies |
+|---|---|
+| Stage 1: Jump to It | Engine Usage — Unlocked; Design Patterns — Unlocked |
+| Stage 2: A Best Friend | Game Systems — Unlocked; System Interrelations — Unlocked |
+| Stage 3: Death by a Thousand Cutscenes | Interaction Design — Unlocked |
+| Stage 4: Boss Mechanics | Game Systems — Developed; Interaction Loops — Unlocked |
+
+These levels assume the stage works as required, the relevant tests pass, and the requested architecture is actually used.
+
+### Additional Claims
+
+You may claim up to three additional competencies at Developed or Mastery. Point to specific files, tests, commits, or features. Say what you changed, why it matters, and how it goes beyond the default stage requirements. Make only claims you can support. There is no advantage to submitting three weak claims instead of one or two strong ones. For each claim, add:
+
+```text
+Competency:
+Level: Developed or Mastery
+Evidence:
+Explanation:
+```
+
+Add your claims to [the Competency Claims section](#competency-claims) near the top if this document.  
+
+### Developed
+
+A Developed claim should show that you can use the competency in a changed or less-guided situation:
+- make a meaningful implementation or design decision
+- go beyond the supplied example or required minimum
+- verify that the result works
+- deal with at least one nontrivial case
+- explain why you chose your approach
+
+### Mastery
+
+A Mastery claim should show independent technical judgment:
+- identify a real problem or limitation yourself
+- design and implement your own solution
+- consider alternatives when there is a meaningful design choice
+- test normal and failure cases
+- explain the tradeoffs of your approach
+
+More code does not automatically mean Mastery.
+
+### Likely Competencies for This Exercise
+
+**Design Patterns: Developed**  
+Adapt the Command pattern to a new gameplay problem. Do not just add another command that follows the same template.
+
+**Design Patterns: Mastery**  
+Change or extend the command architecture in a substantial way and explain why your version is a better fit for the problem you are solving.
+
+**Debugging and Testing: Developed**  
+Add tests or diagnostics beyond the supplied checks. Good evidence would catch a lifecycle bug, queue problem, invalid target, interruption, or similar failure.
+
+**Debugging and Testing: Mastery**  
+Build a testing or diagnostic setup that lets you reason about the command system as a whole, not just one feature at a time.
+
+**Engine Usage: Developed**  
+Use Godot systems deliberately to solve a new problem. Signals, input handling, node lifecycle, scene structure, animation, and physics are all reasonable places to look.
+
+**Engine Usage: Mastery**  
+Make a larger architectural decision about how Godot should manage ownership, lifecycle, communication, or reuse, and justify it from the behavior of your project.
+
+**Game Systems: Developed**  
+Add or substantially revise rules, state, or behavior so that the game plays differently as a result.
+
+**Game Systems: Mastery**  
+Build a system with enough interacting rules that changing one part has consequences elsewhere (i.e., attack selection, state, player response, and feedback meaningfully interact), then explain those consequences. It should feel like a legitimate boss battle in a platformer.
+
+**System Interrelations: Developed**  
+Show that commands, player control, follower behavior, cutscenes, and boss logic cooperate correctly at their boundaries.
+
+**System Interrelations: Mastery**  
+Restructure or extend those interactions without making the responsibilities muddy. Interruptions, invalid state, or recovery behavior are especially good evidence.
+
+**Interaction Design: Developed**  
+Improve timing, controls, feedback, staging, or responsiveness in a way the player can notice.
+
+**Interaction Design: Mastery**  
+Make a substantial interaction change, observe what it does in play, and revise it based on what you find.
+
+**Interaction Loops: Developed**  
+Create or substantially change a repeated cycle of player action and game response.
+
+**Interaction Loops: Mastery**  
+Build a boss interaction with enough state and feedback that the player has to read the system and respond, not just survive another attack.
+
+### Tests and Competency Levels
+
+Passing the supplied tests shows that the required behavior works. Higher-level claims should come from work you added: adaptations, tests, diagnostics, design decisions, or extensions that go beyond the guided path.
