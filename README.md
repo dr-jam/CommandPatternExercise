@@ -113,8 +113,8 @@ This exercise uses the course competency system instead of points. Completing th
 | Stage | Competencies |
 |---|---|
 | **Stage 1: Jump to It** | **Engine Usage — Unlocked**; **Design Patterns — Unlocked** |
-| **Stage 2: A Best Friend** | **Design Patterns — Developed**; **Game Systems — Unlocked**; **System Interrelations — Unlocked** |
-| **Stage 3: Death by a Thousand Cutscenes** | **Debugging and Testing — Unlocked**; **Interaction Design — Unlocked**; **System Interrelations — Unlocked** |
+| **Stage 2: A Best Friend** | **Game Systems — Unlocked**; |
+| **Stage 3: Death by a Thousand Cutscenes** | **Interaction Design — Unlocked** |
 | **Stage 4: Boss Mechanics** | **Game Systems — Developed**; **Interaction Loops — Unlocked** |
 
 These levels assume the stage works as required, the relevant tests pass, and the requested architecture is actually used.
