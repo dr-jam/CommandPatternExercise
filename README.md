@@ -121,7 +121,7 @@ These levels assume the stage works as required, the relevant tests pass, and th
 
 ### Additional Claims
 
-You may claim up to three competencie at Developed or Mastery. Point to specific files, tests, commits, or features. Say what you changed, why it matters, and how it goes beyond the default stage requirements. For each claim, add:
+You may claim up to three additional competencie at Developed or Mastery. Point to specific files, tests, commits, or features. Say what you changed, why it matters, and how it goes beyond the default stage requirements. For each claim, add:
 
 ```text
 Competency:
@@ -146,7 +146,7 @@ A Developed claim should show that you can use the competency in a changed or le
 A Mastery claim should show independent technical judgment:
 - identify a real problem or limitation yourself
 - design and implement your own solution
-- consider at least one reasonable alternative
+- discuss the merits and drawbacks of alternative approaches
 - test normal and failure cases
 - explain the tradeoffs of your approach
 
@@ -176,7 +176,7 @@ Make a larger architectural decision about how Godot should manage ownership, li
 Add or substantially revise rules, state, or behavior so that the game plays differently as a result.
 
 **Game Systems: Mastery**  
-Build a system with enough interacting rules that changing one part has consequences elsewhere, then explain those consequences.
+Build a system with enough interacting rules that changing one part has consequences elsewhere (i.e., attack selection, state, player response, and feedback meaningfully interact), then explain those consequences. It should feel like a legitimate boss battle in a platformer.
 
 **System Interrelations: Developed**  
 Show that commands, player control, follower behavior, cutscenes, and boss logic cooperate correctly at their boundaries.
@@ -198,6 +198,4 @@ Build a boss interaction with enough state and feedback that the player has to r
 
 ### Tests and Competency Levels
 
-Passing the supplied tests shows that the required behavior works. By itself, that is usually not enough for Developed or Mastery.
-
-Higher-level claims should come from work you added: adaptations, tests, diagnostics, design decisions, or extensions that go beyond the guided path.
+Passing the supplied tests shows that the required behavior works. Higher-level claims should come from work you added: adaptations, tests, diagnostics, design decisions, or extensions that go beyond the guided path.
