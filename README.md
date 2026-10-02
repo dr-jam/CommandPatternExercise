@@ -1,7 +1,7 @@
 # Programming Excercise 1: Command Pattern
 
 ## Competency Claims
-
+(insert your competency claims here)  
 ## Description
 
 The goals behind this project are 1) to allow for meaningful gameplay gameplay programming inside a Godot project, and 2) 
