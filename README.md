@@ -8,13 +8,6 @@ to construct basic game systems including health, hit/hurt boxes, player movemen
 parallax scrolling, character movement, a camera that follows the player, animated sprites, boss fights, 
 and commands using the Command software design pattern.
 
-Your project will be score according to the following 70-point system:
-* [10 points] Stage 1 
-* [30 points] Stage 2
-* [15 points] Stage 3
-* [15 points] Stage 4
-
-The remaining 30 points will be based on your peer review of a classmate's programming exercise submission.
 
 ### The Command Pattern ###
 	
@@ -107,3 +100,112 @@ Make your own boss battle. This is your opportunity to perform self-directed, de
 - Visual and auditory effects. 
 
 Good luck!
+
+
+# Competency Assessment
+
+This exercise uses the course competency system instead of points.
+
+Completing the required stages gives you a default set of competencies. You may also make **up to three additional claims** at the **Developed** or **Mastery** level.
+
+### Default Competencies
+
+| Stage | Competencies |
+|---|---|
+| **Stage 1: Jump to It** | **Engine Usage — Unlocked**; **Design Patterns — Unlocked** |
+| **Stage 2: A Best Friend** | **Design Patterns — Developed**; **Game Systems — Unlocked**; **System Interrelations — Unlocked** |
+| **Stage 3: Death by a Thousand Cutscenes** | **Debugging and Testing — Unlocked**; **Interaction Design — Unlocked**; **System Interrelations — Unlocked** |
+| **Stage 4: Boss Mechanics** | **Game Systems — Developed**; **Interaction Loops — Unlocked** |
+
+These levels assume the stage works as required, the relevant tests pass, and the requested architecture is actually used.
+
+### Additional Claims
+
+You may claim up to **three competencies** at Developed or Mastery.
+
+For each claim, add:
+
+```text
+Competency:
+Level: Developed or Mastery
+Evidence:
+Explanation:
+```
+
+Point to specific files, tests, commits, or features. Keep the explanation short. Say what you changed, why it matters, and how it goes beyond the default stage requirements.
+
+### Developed
+
+A Developed claim should show that you can use the competency in a changed or less-guided situation.
+
+In general:
+
+- make a meaningful implementation or design decision;
+- go beyond the supplied example or required minimum;
+- verify that the result works;
+- deal with at least one nontrivial case; and
+- explain why you chose your approach.
+
+### Mastery
+
+A Mastery claim should show independent technical judgment.
+
+In general:
+
+- identify a real problem or limitation yourself;
+- design and implement your own solution;
+- consider at least one reasonable alternative;
+- test normal and failure cases; and
+- explain the tradeoffs of your approach.
+
+More code does not automatically mean Mastery.
+
+### Likely Competencies for This Exercise
+
+**Design Patterns: Developed**  
+Adapt the Command pattern to a new gameplay problem. Do not just add another command that follows the same template.
+
+**Design Patterns: Mastery**  
+Change or extend the command architecture in a substantial way and explain why your version is a better fit for the problem you are solving.
+
+**Debugging and Testing: Developed**  
+Add tests or diagnostics beyond the supplied checks. Good evidence would catch a lifecycle bug, queue problem, invalid target, interruption, or similar failure.
+
+**Debugging and Testing: Mastery**  
+Build a testing or diagnostic setup that lets you reason about the command system as a whole, not just one feature at a time.
+
+**Engine Usage: Developed**  
+Use Godot systems deliberately to solve a new problem. Signals, input handling, node lifecycle, scene structure, animation, and physics are all reasonable places to look.
+
+**Engine Usage: Mastery**  
+Make a larger architectural decision about how Godot should manage ownership, lifecycle, communication, or reuse, and justify it from the behavior of your project.
+
+**Game Systems: Developed**  
+Add or substantially revise rules, state, or behavior so that the game plays differently as a result.
+
+**Game Systems: Mastery**  
+Build a system with enough interacting rules that changing one part has consequences elsewhere, then explain those consequences.
+
+**System Interrelations: Developed**  
+Show that commands, player control, follower behavior, cutscenes, and boss logic cooperate correctly at their boundaries.
+
+**System Interrelations: Mastery**  
+Restructure or extend those interactions without making the responsibilities muddy. Interruptions, invalid state, or recovery behavior are especially good evidence.
+
+**Interaction Design: Developed**  
+Improve timing, controls, feedback, staging, or responsiveness in a way the player can notice.
+
+**Interaction Design: Mastery**  
+Make a substantial interaction change, observe what it does in play, and revise it based on what you find.
+
+**Interaction Loops: Developed**  
+Create or substantially change a repeated cycle of player action and game response.
+
+**Interaction Loops: Mastery**  
+Build a boss interaction with enough state and feedback that the player has to read the system and respond, not just survive another attack.
+
+### Tests and Competency Levels
+
+Passing the supplied tests shows that the required behavior works. By itself, that is usually not enough for Developed or Mastery.
+
+Higher-level claims should come from work you added: adaptations, tests, diagnostics, design decisions, or extensions that go beyond the guided path.
