@@ -1,5 +1,7 @@
 # Programming Excercise 1: Command Pattern
 
+## Competency Claims
+
 ## Description
 
 The goals behind this project are 1) to allow for meaningful gameplay gameplay programming inside a Godot project, and 2) 
@@ -102,11 +104,9 @@ Make your own boss battle. This is your opportunity to perform self-directed, de
 Good luck!
 
 
-# Competency Assessment
+## Competency Assessment
 
-This exercise uses the course competency system instead of points.
-
-Completing the required stages gives you a default set of competencies. You may also make up to three additional claims at the Developed or Mastery level.
+This exercise uses the course competency system instead of points. Completing the required stages gives you a default set of competencies. You may also make up to three additional claims at the Developed or Mastery level.
 
 ### Default Competencies
 
@@ -121,9 +121,7 @@ These levels assume the stage works as required, the relevant tests pass, and th
 
 ### Additional Claims
 
-You may claim up to **three competencies** at Developed or Mastery.
-
-For each claim, add:
+You may claim up to three competencie at Developed or Mastery. Point to specific files, tests, commits, or features. Say what you changed, why it matters, and how it goes beyond the default stage requirements. For each claim, add:
 
 ```text
 Competency:
@@ -132,7 +130,7 @@ Evidence:
 Explanation:
 ```
 
-Point to specific files, tests, commits, or features. Keep the explanation short. Say what you changed, why it matters, and how it goes beyond the default stage requirements.
+Add your claims to [the Competency Claims section](#competency-claims) near the top if this document.  
 
 ### Developed
 
