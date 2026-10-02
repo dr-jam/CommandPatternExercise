@@ -4,8 +4,8 @@
 (insert your competency claims here)  
 ## Description
 
-The goals behind this project are 1) to allow for meaningful gameplay gameplay programming inside a Godot project, and 2) 
-to provide working experience with the command software design pattern. This project is filled with examples of using Unity 
+The goals behind this project are 1) to allow for meaningful gameplay programming inside a Godot project, and 2) 
+to provide working experience with the command software design pattern. This project is filled with examples of using Godot 
 to construct basic game systems including health, hit/hurt boxes, player movement, non-player character behavior,
 parallax scrolling, character movement, a camera that follows the player, animated sprites, boss fights, 
 and commands using the Command software design pattern.
@@ -86,10 +86,10 @@ This game prototype needs some narrative design. Your task is to create a cutsce
 For examples of how the command lists work, see the paired `BossEncounterTrigger` (in [boss_encounter_trigger.gd](ElkSong/scripts/boss_encounter_trigger.gd)) and `Boss` classes. The `BossEncounterTrigger` is attached to the `Area2D` trigger named `BossEncounterTrigger` in the `Main` scene. It is responsible for detecting when the `Player` is in the `Boss`s room and configuring the user interface for the boss encounter (e.g., the cutscene followed by the boss battle).
 
 Your work will be assessed on the following criteria:
-- The number of unique durative commands across the characters. Less than eight types may result in a point deduction.
+- The number of unique durative commands across the characters. Less than eight types may result a lower competency level.
 - How well synced the three characters' commands are to one another.
 - Are the transitions to the cutscene and from the cutscene to the boss battle technically sound.
-- **Bonus**: Telling an interesting tale.
+- The telling of an interesting tale.
 
 To help coordinate these commands, you may wish to use the [cutscene_manager.gd](ElkSong/scripts/cutscene_manager.gd) as a central control mechanism.
 
@@ -112,16 +112,16 @@ This exercise uses the course competency system instead of points. Completing th
 
 | Stage | Competencies |
 |---|---|
-| **Stage 1: Jump to It** | **Engine Usage — Unlocked**; **Design Patterns — Unlocked** |
-| **Stage 2: A Best Friend** | **Game Systems — Unlocked**; |
-| **Stage 3: Death by a Thousand Cutscenes** | **Interaction Design — Unlocked** |
-| **Stage 4: Boss Mechanics** | **Game Systems — Developed**; **Interaction Loops — Unlocked** |
+| Stage 1: Jump to It | Engine Usage — Unlocked; Design Patterns — Unlocked |
+| Stage 2: A Best Friend | Game Systems — Unlocked; System Interrelations — Unlocked |
+| Stage 3: Death by a Thousand Cutscenes | Interaction Design — Unlocked |
+| Stage 4: Boss Mechanics | Game Systems — Developed; Interaction Loops — Unlocked |
 
 These levels assume the stage works as required, the relevant tests pass, and the requested architecture is actually used.
 
 ### Additional Claims
 
-You may claim up to three additional competencie at Developed or Mastery. Point to specific files, tests, commits, or features. Say what you changed, why it matters, and how it goes beyond the default stage requirements. For each claim, add:
+You may claim up to three additional competencies at Developed or Mastery. Point to specific files, tests, commits, or features. Say what you changed, why it matters, and how it goes beyond the default stage requirements. Make only claims you can support. There is no advantage to submitting three weak claims instead of one or two strong ones. For each claim, add:
 
 ```text
 Competency:
@@ -146,7 +146,7 @@ A Developed claim should show that you can use the competency in a changed or le
 A Mastery claim should show independent technical judgment:
 - identify a real problem or limitation yourself
 - design and implement your own solution
-- discuss the merits and drawbacks of alternative approaches
+- consider alternatives when there is a meaningful design choice
 - test normal and failure cases
 - explain the tradeoffs of your approach
 
